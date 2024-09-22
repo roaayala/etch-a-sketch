@@ -14,7 +14,7 @@ const checkInput = () => {
 
 let gridSizes = checkInput();
 const min = 4;
-const max = 48;
+const max = 32;
 
 const randomizeColor = () => Math.floor(Math.random() * 255 + 1);
 const createColorBoxes = (size, randomColor) => {
@@ -37,5 +37,11 @@ const createColorBoxes = (size, randomColor) => {
     container.append(colorBoxes);
   }
 };
-
 createColorBoxes(gridSizes, randomizeColor);
+
+const colorBoxes = Array.from(document.querySelectorAll('.color-box'));
+colorBoxes.forEach((box) => {
+  box.addEventListener('mouseover', () => {
+    box.style.backgroundColor = `white`;
+  });
+});
