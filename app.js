@@ -2,7 +2,17 @@ const container = document.querySelector('.container');
 container.style.width = `80vw`;
 container.style.margin = '0 auto';
 
-let gridSizes = parseInt(prompt('Choose grid size between 8 to 64'));
+const checkInput = () => {
+  while (true) {
+    const input = prompt('Choose grid size between 8 to 64');
+    const isValidNumber = parseInt(input);
+    if (!isNaN(isValidNumber)) {
+      return isValidNumber;
+    }
+  }
+};
+
+let gridSizes = checkInput();
 const min = 4;
 const max = 48;
 
