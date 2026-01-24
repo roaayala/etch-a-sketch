@@ -10,7 +10,7 @@ for (let i = 1; i <= size * size; i++) {
 	const box = document.createElement('div');
 	box.setAttribute(
 		'style',
-		`width: ${600 / size}px; height: ${600 / size}px; border: 1px solid black;`,
+		`width: ${400 / size}px; height: ${400 / size}px; border: 1px solid black;`,
 	);
 
 	const color = `rgb(${generateRandomColor()},${generateRandomColor()},${generateRandomColor()})`;
