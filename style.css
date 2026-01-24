@@ -16,7 +16,7 @@ body {
 .container {
 	width: 600px;
 	height: 600px;
-	background-color: antiquewhite;
+
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
