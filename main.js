@@ -14,9 +14,15 @@ for (let i = 1; i <= size * size; i++) {
 	);
 
 	const color = `rgb(${generateRandomColor()},${generateRandomColor()},${generateRandomColor()})`;
+	let defaultOpacity = 0.1;
 
 	box.addEventListener('mouseenter', (event) => {
 		event.target.style.backgroundColor = color;
+		if (defaultOpacity < 1.0) {
+			event.target.style.opacity = `${defaultOpacity}`;
+			defaultOpacity += 0.1;
+			console.log(defaultOpacity);
+		}
 	});
 
 	container.appendChild(box);
